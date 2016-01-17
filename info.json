@@ -1,0 +1,9 @@
+{
+	"name":"PocketRepair",
+	"author":"Wulfson",
+	"version":"1.0.0",
+	"title":"PocketRepair",
+	"homepage":"",
+	"description":"Repair items that are sitting in your inventory",
+	"dependencies": ["base"]
+}
