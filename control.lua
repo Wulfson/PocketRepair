@@ -138,7 +138,7 @@ local function handle_repair()
 			if num_modules > 0 then
 				if lists.damaged.player_quickbar[player.index] then
 					for slot, stack in pairs(lists.damaged.player_quickbar[player.index]) do
-						if stack.health < 1 then
+						if stack.valid_for_read and stack.health < 1 then
 							if config.packs.enabled then
 								if not handle_durability(selected_pack) then
 									return
@@ -157,7 +157,7 @@ local function handle_repair()
 
 				if lists.damaged.player_main[player.index] and in_use < num_modules then
 					for slot, stack in pairs(lists.damaged.player_main[player.index]) do
-						if stack.health < 1 then
+						if stack.valid_for_read and stack.health < 1 then
 							if config.packs.enabled then
 								if not handle_durability(selected_pack) then
 									return
